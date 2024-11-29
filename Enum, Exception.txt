@@ -1,0 +1,189 @@
+namespace Enum__Exception
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            #region Task1
+            //Room room1 = new Room("Room 1", 150, 2);
+            //Room room2 = new Room("Room 2", 300, 4);
+
+            //Hotel hotel = new Hotel("Hilton Hotel");
+
+            //hotel.AddRoom(room1);
+            //hotel.AddRoom(room2);
+
+            //try
+            //{
+            //    hotel.MakeReservation(3);
+            //}
+            //catch (NullReferenceException ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
+            //catch (NotAvailableException ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
+
+            //Console.WriteLine("-------------------------------");
+            //Console.WriteLine("All rooms: ");
+
+            //foreach (var room in hotel.GetRooms())
+            //{
+            //    room.ShowInfo();
+            //}
+            #endregion
+
+            #region Task2
+            //Car car1 = new Car()
+            //{
+            //    Brand="BMW",
+            //    Model="E60",
+            //    Type=Type.Sport
+            //};
+            //Car car2 = new Car()
+            //{
+            //    Brand ="Mercedes",
+            //    Model ="gle 450",
+            //    Type =Type.SUV
+            //};
+
+            //Console.WriteLine(car1.ToString());
+            //Console.WriteLine(car2.ToString());
+            #endregion
+        }
+    }
+
+    #region Task1(classes)
+    //public class NotAvailableException : Exception
+    //{
+    //    public NotAvailableException() { }
+    //    public NotAvailableException(string? message) : base(message)
+    //    {
+    //    }
+    //}
+
+    //public class Room
+    //{
+    //    public static int Counter;
+    //    private int _id;
+
+    //    public string Name;
+    //    public double Price;
+    //    public byte PersonCapacity;
+    //    public bool IsAvailable = true;
+
+    //    public int Id
+    //    {
+    //        get => _id;
+    //    }
+
+    //    public Room(string name, double price, byte personCapacity)
+    //    {
+    //        _id = ++Counter;
+    //        Name = name;
+    //        Price = price;
+    //        PersonCapacity = personCapacity;
+    //    }
+
+    //    public void ShowInfo()
+    //    {
+    //        Console.WriteLine(ToString());
+    //    }
+
+    //    public override string ToString()
+    //    {
+    //        return $"{Id} - {Name} - {Price} - {PersonCapacity} - Available: {IsAvailable}";
+    //    }
+    //}
+
+    //public class Hotel
+    //{
+    //    public string Name;
+    //    private Room[] Rooms = Array.Empty<Room>();
+
+    //    public Hotel(string name)
+    //    {
+    //        Name = name;
+    //    }
+
+    //    public void AddRoom(Room room)
+    //    {
+    //        Array.Resize(ref Rooms, Rooms.Length + 1);
+    //        Rooms[^1] = room;
+    //    }
+
+    //    public void MakeReservation(int? roomId)
+    //    {
+    //        if (roomId == null)
+    //        {
+    //            throw new NullReferenceException("Id cannot be null!");
+    //        }
+
+    //        bool roomFound = false;
+    //        foreach (var room in Rooms)
+    //        {
+    //            if (room.Id == roomId)
+    //            {
+    //                roomFound = true;
+    //                if (!room.IsAvailable)
+    //                {
+    //                    throw new NotAvailableException("Room is not available!");
+    //                }
+    //                else
+    //                {
+    //                    room.IsAvailable = false;
+    //                    Console.WriteLine($"Reservation made for room {room.Name}");
+    //                }
+
+    //                room.ShowInfo();
+    //                break;
+    //            }
+    //        }
+
+    //        if (!roomFound)
+    //        {
+    //            throw new Exception("Room id is not valid!");
+    //        }
+    //    }
+
+    //    public Room[] GetRooms()
+    //    {
+    //        return Rooms;
+    //    }
+    //}
+    #endregion
+
+    #region Task2(classes)
+    //public class Car
+    //{
+    //    public static int Counter;
+    //    private int _id;
+
+    //    public string Brand;
+    //    public string Model;
+    //    public Type Type;
+    //    private Car[] Cars=Array.Empty<Car>();
+    //    public override string ToString()
+    //    {
+    //        return $"{_id} - {Brand} - {Model} - {Type}";
+    //    }
+    //    public Car()
+    //    {
+    //        _id = ++Counter;
+    //    }
+    //}
+
+    //    public enum Type
+    //{
+    //    Sport=1,
+    //    SUV,
+    //    Sedan
+    //}
+    #endregion
+}
